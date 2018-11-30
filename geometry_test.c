@@ -15,6 +15,22 @@
 
 #include "geometry.h"
 
+START_TEST(test_2d_area_triangle) {
+    coord_2d_t a;
+    coord_2d_t b;
+    coord_2d_t c;
+
+    a.x = 0;
+    a.y = 0;
+    b.x = 1;
+    b.y = 0;
+    c.x = 0;
+    c.y = 1;
+    float ans = coord_2d_area_triangle(a,b,c);
+    ck_assert(ans == .5f);
+}
+END_TEST
+
 /* coord_2d_eq Test */
 START_TEST(test_2d_eq)
 {
